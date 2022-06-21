@@ -1,0 +1,40 @@
+{
+  "definitions":{
+    "CustomGrid":{
+      "type":"array",
+      "title":"Custom grid promotions",
+      "items":{
+        "properties":{
+          "nameItem":{
+            "title":"Nombre del item",
+            "$ref":"app:vtex.native-types#/definitions/text",
+            "default":""
+          },
+          "titleItem":{
+            "title":"Titulo del item",
+            "$ref":"app:vtex.native-types#/definitions/text",
+            "default":""
+          },
+          "description":{
+            "title":"descripcion del item",
+            "$ref":"app:vtex.native-types#/definitions/text",
+            "default":""
+          },
+          "link":{
+            "title":"link de item",
+            "$ref":"app:vtex.native-types#/definitions/link",
+            "default":""
+          },
+          "image":{
+            "$ref":"app:vtex.native-types#/definitions/url",
+            "default":"",
+            "title":"Imagen",
+            "widget":{
+              "ui:widget":"image-uploader"
+            }
+          }
+        }
+      }
+    }
+  }
+}

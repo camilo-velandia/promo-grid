@@ -1,0 +1,13 @@
+{
+  "list-context.custom-grid":{
+    "component":"CustomGrid",
+    "composition":"children",
+    "allowed":"*",
+    "content":{
+      "properties":{
+        "gridItem":{
+          "$ref":"app:vuitg.custom-grid#/definitions/CustomGrid"
+        }
+      }
+    }
+  }
