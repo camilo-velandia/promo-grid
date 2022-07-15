@@ -8,24 +8,21 @@ import customGridSchema from '../schemas/CustomGridSchema';
 import styles from './styles.css'
 
 export interface CustomGridProps{
-  items: CustomGridSchema
+  gridItem: CustomGridSchema
   gridTypeDesktop: number
   gridTypeMobile: number
 }
 
-const CustomGrid = ({items, gridTypeDesktop = 1, gridTypeMobile = 1}:CustomGridProps) => {
+const CustomGrid = ({gridItem, gridTypeDesktop = 1, gridTypeMobile = 1}:CustomGridProps) => {
 
   const CSS_HNDLES=["grid_container","grid_container_mobile"]
   const handles = useCssHandles(CSS_HNDLES)
   const { isMobile } = useDevice()
   const {list} = useListContext() || []
-  const bulletsGroup = getItemsAsTSXList(items)
+  const bulletsGroup = getItemsAsTSXList(gridItem)
   const newListContextValue = list.concat(bulletsGroup)
   const gridTypeClassDesktop = `grid__desktop__${gridTypeDesktop}`
   const gridTypeClassMobile = `grid__mobile__${gridTypeMobile}`
-
-  console.log('gridTypeClassMobile',gridTypeClassMobile)
-
 
   return (
     <ListContextProvider list={newListContextValue}>

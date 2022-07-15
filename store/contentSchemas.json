@@ -5,12 +5,12 @@
       "title":"Custom grid promotions",
       "items":{
         "properties":{
-          "nameItem":{
+          "name":{
             "title":"Nombre del item",
             "$ref":"app:vtex.native-types#/definitions/text",
             "default":""
           },
-          "titleItem":{
+          "title":{
             "title":"Titulo del item",
             "$ref":"app:vtex.native-types#/definitions/text",
             "default":""
