@@ -1,0 +1,113 @@
+.grid_container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows:repeat(2, 1fr);
+}
+
+.grid_container_mobile{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows:repeat(3, 1fr);
+}
+
+.grid_container > div:nth-child(1),
+.grid_container_mobile > div:nth-child(1){
+  grid-area: bigProduct ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid_container > div:nth-child(2),
+.grid_container_mobile > div:nth-child(2){
+  grid-area: product1 ;
+}
+.grid_container > div:nth-child(3),
+.grid_container_mobile > div:nth-child(3){
+  grid-area: product2 ;
+}
+.grid_container > div:nth-child(4),
+.grid_container_mobile > div:nth-child(4){
+  grid-area: product3 ;
+}
+.grid_container > div:nth-child(5),
+.grid_container_mobile > div:nth-child(5){
+  grid-area: product4 ;
+}
+
+/* layout 1 desktop */
+.grid__desktop__1 {
+  grid-template-areas: "bigProduct bigProduct product1 product3"
+                       "bigProduct bigProduct product2 product4";
+}
+/* end layout 1 desktop */
+
+/* layout 2 desktop */
+.grid__desktop__2 {
+  grid-template-areas: "product1 bigProduct bigProduct product3"
+                       "product2 bigProduct bigProduct product4";
+}
+/* end layout 2 desktop */
+
+/* layout 3 desktop */
+.grid__desktop__3 {
+  grid-template-areas: "product1 product3 bigProduct bigProduct"
+                       "product2 product4 bigProduct bigProduct";
+}
+/* end layout 3 desktop */
+
+/* layout 4 desktop */
+.grid__desktop__4 {
+  grid-template-areas: "product3 product4 bigProduct bigProduct"
+                       "product1 product2 bigProduct bigProduct";
+}
+/* end layout  4 desktop */
+
+
+/* layout 1 mobile */
+.grid__mobile__1 {
+  grid-template-areas: "bigProduct bigProduct"
+                       "product1 product3"
+                       "product2 product4";
+}
+/* end layout 1 mobile */
+
+/* layout 2 mobile */
+.grid__mobile__2 {
+  grid-template-areas: "product1 product3"
+                        "bigProduct bigProduct"
+                        "product2 product4";
+}
+/* end layout 2 mobile */
+
+/* layout 3 mobile */
+.grid__mobile__3 {
+  grid-template-areas: "product1 product3"
+                        "product2 product4"
+                        "bigProduct bigProduct";
+}
+/* end layout 3 mobile */
+
+/* layout 4 mobile */
+.grid__mobile__4 {
+  grid-template-areas: "bigProduct bigProduct"
+                        "product1 product2"
+                        "product3 product4";
+}
+/* end layout  4 mobile */
+
+/* layout 5 mobile */
+.grid__mobile__5 {
+  grid-template-areas: "product4 product4"
+                        "product1 product3"
+                        "product2 bigProduct";
+}
+/* end layout  5 mobile */
+
+/* layout 6 mobile */
+.grid__mobile__6 {
+  grid-template-areas: "bigProduct product1"
+                        "product2 product3"
+                        "product4 product4";
+}
+/* end layout  6 mobile */

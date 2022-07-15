@@ -5,7 +5,6 @@ import CardItem from './CardItem'
 export const getItemsAsTSXList =(
   item: CustomGridSchema
 ) => {
-  console.log("item",item)
   return(
     item?.map((listItem:any , index)=>(
         <CardItem
