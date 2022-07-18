@@ -1,19 +1,12 @@
 import React from 'react';
 import {Link} from 'vtex.render-runtime';
 import {useCssHandles} from 'vtex.css-handles';
-import {LinkProps} from './CustomGridTypes';
+import {CardItemProps} from './CustomGridTypes';
 
-type Props = {
-  src: string
-  titleItem: string
-  link: LinkProps
-  description: string
-}
+const CardItem = ({src, titleItem, link, description}:CardItemProps) => {
 
-const CardItem = ({src, titleItem, link, description}:Props) => {
-
-  const CSS_HNDLES=["card_item","card_item--title","card_item--image","card_item--figure","card_item--link","card_item--desc"]
-  const handles = useCssHandles(CSS_HNDLES)
+  const CSS_HANDLES=["card_item","card_item--title","card_item--image","card_item--figure","card_item--link","card_item--desc"]
+  const handles = useCssHandles(CSS_HANDLES)
 
   return (
     <div className={handles.card_item}>

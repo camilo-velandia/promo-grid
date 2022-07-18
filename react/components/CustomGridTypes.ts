@@ -14,3 +14,16 @@ export interface LinkProps{
   openNewTab?:boolean
   newTab?:boolean
 }
+
+export interface CustomGridProps{
+  gridItem: CustomGridSchema
+  gridTypeDesktop: number
+  gridTypeMobile: number
+}
+
+export type CardItemProps = {
+  src: string
+  titleItem: string
+  link: LinkProps
+  description: string
+}

@@ -9,11 +9,11 @@ export const getItemsAsTSXList =(
     item?.map((listItem:any , index)=>(
         <CardItem
           key={index}
-          src={listItem.image}
-          titleItem={listItem.title}
-          description={listItem.description}
+          src={listItem?.image}
+          titleItem={listItem?.title}
+          description={listItem?.description}
           link={
-              listItem.link ? listItem.link : {
+              listItem?.link ? listItem?.link : {
                   url:'',
                   text:'',
                   attributeNofollow:false,
